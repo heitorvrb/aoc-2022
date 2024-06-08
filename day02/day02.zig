@@ -9,7 +9,7 @@ pub fn main() !void {
     defer arena.deinit();
     const allocator = arena.allocator();
 
-    const file = try fs.cwd().openFile("input.txt", .{});
+    const file = try fs.cwd().openFile("input-test.txt", .{});
     defer file.close();
 
     var buf_reader = std.io.bufferedReader(file.reader());
